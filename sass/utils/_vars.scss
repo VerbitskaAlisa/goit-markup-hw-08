@@ -1,0 +1,17 @@
+/* Цвет фона #FFFFFF  */
+/* Вторичный цвет фона #2F303A */
+/* Акцент фона #F5F4FA */
+/* Основной цвет текста #757575 */
+/* Цвет загаловков #212121 */
+/* Акцент #2196F3 */
+
+
+:root {
+    --bgc: #FFFFFF;
+    --secondary-bgc: #2F303A;
+    --bgc-accent: #F5F4FA;
+    --text-color: #757575;
+    --header-color: #212121;
+    --accent-text: #2196F3;
+    --main-cub: cubic-bezier(0.4, 0, 0.2, 1);
+}
