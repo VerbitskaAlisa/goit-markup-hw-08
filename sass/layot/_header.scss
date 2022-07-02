@@ -5,13 +5,16 @@
 }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // >.container {
+    //     display: flex;
+    //     align-items: center;
+    // }
 }
 
 .header-nav {
     display: flex;
-
     align-items: center;
 }
 
@@ -23,7 +26,10 @@
     font-size: 26px;
     line-height: 1.7;
 
-    margin-right: 93px;
+    @media screen and (min-width: 768px) {
+     margin-right: 88px;
+    }
+    // margin-right: 93px;
 
 
 }
@@ -31,3 +37,33 @@
 .logo .first-word {
     color: var(--accent-text);
 }
+
+button.menu-open-btn {
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
+}
+
+.menu-open-btn, .menu-close-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    padding: 0;
+    min-width: 40px;
+    height: 40px;
+}
+
+.menu-open-btn svg,
+.menu-close-btn svg {
+
+    transition: color 250ms var(--main-cub);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-text);
+    }
+}
+
+
+

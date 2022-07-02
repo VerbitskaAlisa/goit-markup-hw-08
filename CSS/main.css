@@ -69,10 +69,24 @@ body {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 button {
@@ -275,8 +289,8 @@ button {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header-nav {
@@ -290,15 +304,151 @@ button {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.7;
-  margin-right: 93px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
 }
 
 .logo .first-word {
   color: var(--accent-text);
 }
 
-.site-nav {
+@media screen and (min-width: 767px) {
+  button.menu-open-btn {
+    display: none;
+  }
+}
+
+.menu-open-btn, .menu-close-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  padding: 0;
+  min-width: 40px;
+  height: 40px;
+}
+
+.menu-open-btn svg,
+.menu-close-btn svg {
+  transition: color 250ms var(--main-cub);
+}
+.menu-open-btn svg:hover, .menu-open-btn svg:focus,
+.menu-close-btn svg:hover,
+.menu-close-btn svg:focus {
+  fill: var(--accent-text);
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 48px;
+}
+.mob-menu .container {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
+}
+@media screen and (min-width: 767px) {
+  .mob-menu {
+    display: none;
+  }
+}
+
+.mob-menu.is-hidden {
+  display: none;
+}
+
+.mob-site-nav {
+  margin-bottom: 40px;
+}
+
+.mob-site-nav a {
+  color: var(--header-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition: color 250ms var(--main-cub);
+}
+.mob-site-nav a:hover, .mob-site-nav a:focus {
+  color: var(--accent-text);
+}
+
+.mob-site-nav .portfolio-link {
+  color: var(--accent-text);
+}
+
+.mob-site-nav .studio-link {
+  color: var(--accent-text);
+}
+
+.mob-site-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__item a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 250ms var(--main-cub);
+}
+.mob-menu__item a:hover, .mob-menu__item a:focus {
+  color: var(--accent-text);
+}
+
+.mob-menu__item > .tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-text);
+}
+
+.mob-menu__item > .mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu-social {
+  display: flex;
+  margin-top: 64px;
+}
+
+.mob-menu-social__item:not(:last-child) {
+  margin-right: 20px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-menu-social a {
+  text-decoration: none;
+  color: var(--accent-text);
+}
+
+.site-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .site-nav > li:not(:last-child) {
@@ -308,7 +458,7 @@ button {
 .site-nav a {
   color: var(--header-color);
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms var(--main-cub);
 }
@@ -355,26 +505,42 @@ button {
 }
 
 .contacts {
-  display: flex;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+  }
+  .contacts > .contact-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contacts a {
   display: flex;
   align-items: center;
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17px;
   letter-spacing: 0.02em;
   color: var(--text-color);
   text-decoration: none;
   transition: color 250ms var(--main-cub);
 }
+@media screen and (min-width: 1200px) {
+  .contacts a {
+    line-height: 1.14;
+  }
+}
 .contacts a:hover, .contacts a:focus {
   color: var(--accent-text);
-}
-
-.contacts > .contact-item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .item {

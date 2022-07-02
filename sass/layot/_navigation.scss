@@ -1,5 +1,11 @@
 .site-nav {
-    display: flex;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .site-nav>li:not( :last-child) {
@@ -10,7 +16,7 @@
     color: var(--header-color);
 
     font-weight: 500;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
 
     transition: color 250ms var(--main-cub);
