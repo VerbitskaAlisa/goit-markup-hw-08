@@ -79,15 +79,15 @@
         </div>
     </header>
     <main>
-        <!--Секция герой-->
-        <!-- <section class="hero">
+        <!-- Секция герой -->
+        <section class="hero">
             <div class="container hero__content">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
             <button type="button" data-modal-open>Заказать услугу</button> 
             </div>
-        </section> -->
+        </section>!-- 
         <!--Секция с особенностями-->
-        <!-- <section class="features">
+        <section class="features">
             <div class="container">
             <h2 class="visually-hidden">Особенности</h2>
             <ul class="features__list list">
@@ -109,9 +109,9 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!--Секция о работе-->
-        <!-- <section class="work">
+        <section class="work">
             <div class="container">
             <h2 class="work__title title">Чем мы занимаемся</h2>
             <ul class="work__list list">
@@ -127,14 +127,18 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!--Секция команды-->
-        <!-- <section class="cards">
+        <section class="cards">
             <div class="container">
             <h2 class="cards__title title">Наша команда</h2>
             <ul class="cards__list list">
                 <li class="cards__item">
-                    <img src="./images/section4/img.jpg" width="270" height="260" alt="Изображение мужчини">
+                    <picture>
+                        <source srcset="./images/section4/img.jpg 270w, ./images/section4/tablet/img.jpg 354w, ./images/section4/mob/img.jpg 450w, ./images/section4/img@2x.jpg 540w, ./images/section4/tablet/img@2x.jpg 708w, ./images/section4/mob/img@2x.jpg 900w"
+                        sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"/>
+                        <img src="./images/section4/img.jpg" alt="Изображение мужчини">
+                    </picture>
                     <div class="cards__footer">
                     <h3 class="cards__name">Игорь Демьяненко</h3>
                     <p class="cards__pos">Product Designer</p>
@@ -170,7 +174,12 @@
                     </div>
                 </li>
                 <li class="cards__item">
-                    <img src="./images/section4/img-2.jpg" width="270" height="260" alt="Изображение женщини">
+                    <picture>
+                    <source
+                        srcset="./images/section4/img-2.jpg 270w, ./images/section4/tablet/img-2.jpg 354w, ./images/section4/mob/img-2.jpg 450w, ./images/section4/img@2x-2.jpg 540w, ./images/section4/tablet/img@2x-2.jpg 708w, ./images/section4/mob/img@2x-2.jpg 900w"
+                        sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" />
+                    <img src="./images/section4/img-2.jpg" alt="Изображение женщини">
+                    </picture>
                     <div class="cards__footer">
                     <h3 class="cards__name">Ольга Репина</h3>
                     <p class="cards__pos">Frontend Developer</p>
@@ -206,7 +215,12 @@
                     </div>
                 </li>
                 <li class="cards__item">
-                    <img src="./images/section4/img-3.jpg" width="270" height="260" alt="Изображение мужчини">
+                    <picture>
+                    <source
+                        srcset="./images/section4/img-3.jpg 270w, ./images/section4/tablet/img-3.jpg 354w, ./images/section4/mob/img-3.jpg 450w, ./images/section4/img@2x-3.jpg 540w, ./images/section4/tablet/img@2x-3.jpg 708w, ./images/section4/mob/img@2x-3.jpg 900w"
+                        sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" />
+                    <img src="./images/section4/img-3.jpg" alt="Изображение мужчини">
+                    </picture>
                     <div class="cards__footer">
                     <h3 class="cards__name">Николай Тарасов</h3>
                     <p class="cards__pos">Marketing</p>
@@ -242,7 +256,12 @@
                     </div>
                 </li>
                 <li class="cards__item">
-                    <img src="./images/section4/img-4.jpg" width="270" height="260" alt="Изображение мужчини">
+                    <picture>
+                        <source
+                            srcset="./images/section4/img-4.jpg 270w, ./images/section4/tablet/img-4.jpg 354w, ./images/section4/mob/img-4.jpg 450w, ./images/section4/img@2x-4.jpg 540w, ./images/section4/tablet/img@2x-4.jpg 708w, ./images/section4/mob/img@2x-4.jpg 900w"
+                            sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw" />
+                        <img src="./images/section4/img-4.jpg" alt="Изображение мужчини">
+                    </picture>
                     <div class="cards__footer">
                     <h3 class="cards__name">Михаил Ермаков</h3>
                     <p class="cards__pos">UI Designer</p>
@@ -279,9 +298,9 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!-- Секция постоянные клиенты -->
-        <!-- <section class="clients">
+        <section class="clients">
             <div class="container">
             <h2 class="clients__title">Постоянные клиенты</h2>
             <ul class="clients__list list">
@@ -324,11 +343,11 @@
                 </a></li>
             </ul>
             </div>
-        </section> -->
+        </section>
     </main>
 
     <!-- FOOTER -->
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container footer-container">
             <div class="first-part">
         <a href="./index.html" class="logo link"><span class="first-word">Web</span>Studio</a>
@@ -381,7 +400,7 @@
                 </form>
                 </div>
          </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-button" data-modal-close>

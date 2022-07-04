@@ -35,7 +35,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(37px);
+    transform: translateY(35px);
     content: '';
     display: block;
     width: 100%;
@@ -50,7 +50,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(37px);
+
+
+    transform: translateY(35px);
     content: '';
     display: block;
     width: 100%;
@@ -59,6 +61,8 @@
 
     background: #2196F3;
     border-radius: 2px;
+
+    
 }
 
 .site-nav .portfolio-link {

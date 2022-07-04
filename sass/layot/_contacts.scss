@@ -38,10 +38,12 @@
     }
 }
 
+.contact-item:not(:last-child) {
+    margin-bottom: 10px;
 
-.item {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
 }
 
 .contact-icon-e-mail {
