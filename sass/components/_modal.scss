@@ -26,7 +26,7 @@
     transform: translate(-50%, -50%);
 
 
-    width: 528px;
+    width: 450px;
     min-height: 581px;
     background-color: var(--bgc);
     padding: 40px;
@@ -38,6 +38,10 @@
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.75);
+    }
+
+    @media screen and(min-width: 1200px) {
+        width: 528px;
     }
 }
 

@@ -5,12 +5,35 @@
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    @media screen and(min-width:1200px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
 }
 
-.first-part {
-    margin-right: 70px;
+.tablet-wrap {
+    @media screen and(min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    @media screen and(min-width: 1200px) {
+        align-items: baseline;
+    }
+}
+
+
+.first-part { 
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media screen and(min-width: 1200px){
+        text-align: start;
+        margin-bottom: 0;
+        margin-right: 70px;
+    }
 }
 
 .first-part > .logo {
@@ -20,15 +43,17 @@
     font-family: Raleway,
         sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.7;
-
+    font-size: 24px;
+    line-height: 1.17;
     margin-bottom: 20px;
+    margin-right: 0;
 }
+
+
 
 .footer-item {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     &:last-child {
         margin-bottom: 0;
@@ -46,14 +71,16 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
 
     color: #FFFFFF;
     margin-bottom: 20px;
+
+    @media screen and(min-width: 1200px){
+        text-align: start;
+    }
 }
 
-.third-part {
-    margin-left: auto;
-}
 
 .third-part-text {
     margin-bottom: 20px;
@@ -62,30 +89,52 @@
     font-size: 14px;
     line-height: calc(16/14);
     text-transform: uppercase;
+    text-align: center;
     
     color: #FFFFFF;
+
+    @media screen and(min-width: 1200px){
+        text-align: start;
+    }
 }
 
-.third-part-form {
-    display: flex;
-    align-items: center;
+ .third-part-form {
+    @media screen and(min-width: 1200px) {
+        display: flex;
+        align-items: center;
+    }
 }
+
 
 .mail-input {
     display: inline-block;
     color: var(--bgc);
     background-color: transparent;
-    width: 348px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     outline: none;
     padding-left: 20px;
+    margin-bottom: 20px;
 
     transition: border-color 250ms var(--main-cub);
 
     &:focus {
         border-color: var(--accent-text);
+    }
+
+    @media screen and(min-width: 768px){
+        width: 450px;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    @media screen and(min-width: 1200px){
+        width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
     }
 }
 
@@ -93,7 +142,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 12px;
+    margin: auto auto;
 
     &::after {
         display: inline-block;
