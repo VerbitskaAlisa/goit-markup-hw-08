@@ -379,6 +379,7 @@ button {
   height: 100vh;
   padding-top: 10px;
   padding-bottom: 48px;
+  z-index: 9999;
 }
 .mob-menu .container {
   display: flex;
